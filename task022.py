@@ -19,4 +19,4 @@ first_set = {randint(0, 10) for _ in range(n)}
 print(first_set)
 second_set = {randint(0, 10) for _ in range(m)}
 print(second_set)
-print(sorted(first_set.intersection(second_set)))
+print(sorted(first_set & second_set))
