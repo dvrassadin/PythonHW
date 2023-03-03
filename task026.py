@@ -4,4 +4,8 @@
 # A = 3; B = 5 -> 243 (3⁵)
 #     A = 2; B = 3 -> 8
 
+def pow_rec(a, b):
+    return a if b == 1 else pow_rec(a, b - 1) * a
 
+
+print(pow_rec(a=5, b=7))
