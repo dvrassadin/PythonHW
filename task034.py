@@ -13,11 +13,16 @@
 
 song = "пара-ра-рам рам-пам-папам па-ра-па-дам"
 
-song_a = [list(filter(lambda l: l == "а", i)) for i in song.split(" ")]
 
-for el in song_a:
-    if len(el) != len(song_a[0]):
-        print("Пам парам")
-        break
-else:
-    print("Парам пам-пам")
+def is_there_a_rhythm(song: str) -> bool:
+    song_a = [list(filter(lambda l: l == "а", i)) for i in song.split(" ")]
+    if len(song_a) < 2:
+        return False
+    for i in range(1, len(song_a)):
+        if song_a[i] != song_a[0]:
+            return False
+    else:
+        return True
+
+
+print("Парам пам-пам" if is_there_a_rhythm(song) else "Пам парам")

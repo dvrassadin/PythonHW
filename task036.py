@@ -5,4 +5,13 @@
 # Примечание: бинарной операцией называется любая операция, у которой ровно два аргумента,
 # как, например, у операции умножения.
 
+def print_operation_table(operation, num_rows: int = 6, num_columns: int = 6):
+    for i in range(1, num_rows + 1):
+        for j in range(1, num_columns + 1):
+            print(operation(i, j), end="\t")
+        print()
 
+
+print_operation_table(lambda x, y: x * y, num_rows=11, num_columns=11)
+
+print(type(print_operation_table))
