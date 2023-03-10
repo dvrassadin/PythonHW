@@ -13,5 +13,3 @@ def print_operation_table(operation, num_rows: int = 6, num_columns: int = 6):
 
 
 print_operation_table(lambda x, y: x * y, num_rows=11, num_columns=11)
-
-print(type(print_operation_table))
