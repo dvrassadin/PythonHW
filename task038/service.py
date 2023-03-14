@@ -1,10 +1,6 @@
 def load_data(file_name: str) -> list:
-    contacts = []
     with open(file_name, "r") as file:
-        for el in file.read().split("\n"):
-            if el != "":
-                contacts.append(el.split(", "))
-    return sorted(contacts)
+        return sorted([el.split(", ") for el in file.read().split("\n") if el != ""])
 
 
 def print_contacts(contacts: list):

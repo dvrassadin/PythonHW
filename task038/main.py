@@ -14,7 +14,7 @@ file_name = "task038/contacts.txt"
 print("Contacts")
 while True:
     action = input(
-        "Enter the number of action:\n1 — Show\n2 — Find\n3 — Add\n4 — Edit\n5 - Delete\n0 — Exit\n>>> ")
+        "Enter the number of action:\n1 — Show all\n2 — Find\n3 — Add\n4 — Edit\n5 - Delete\n0 — Exit\n>>> ")
     if action == "0":  # Exit
         print()
         break
@@ -37,13 +37,13 @@ while True:
         count = int(input("\nThe number of contact you want to edit: "))
         s.edit_contact(contacts, count - 1)
         s.save_data(file_name, contacts)
-        print("Done.\n")
+        print()
     elif action == "5":  # Delete contact
         contacts = s.load_data(file_name)
         s.print_contacts(contacts)
         count = int(input("\nThe number of contact you want to delete: "))
         s.delete_contact(contacts, count - 1)
         s.save_data(file_name, contacts)
-        print("Done.\n")
+        print()
     else:
         print("The number is incorrect.")
