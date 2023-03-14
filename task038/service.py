@@ -41,7 +41,7 @@ def delete_contact(contacts: list, index: int):
 def edit_contact(contacts: list, index: int):
     if index < len(contacts):
         action = input(
-            "What do you want to edit:\n1 — First_name\n2 — Second name\n3 — Phone number\n0 — Exit\n>>> ")
+            "What do you want to edit:\n1 — First name\n2 — Second name\n3 — Phone number\n0 — Exit\n>>> ")
         if action == "0":  # Exit
             return
         elif action == "1":  # First name
